@@ -1,0 +1,125 @@
+.header {
+  height: var(--mobile-navbar-height);
+  background-color: var(--header-background-color);
+  /* background-image: var(--header-background-color); */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 25px;
+  padding: 0 20px;
+  line-height: var(--mobile-navbar-height);
+  font-weight: bold;
+}
+
+.logo-img {
+  width: calc(var(--mobile-navbar-height) - 10px);
+  margin-left: 20px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-right: 20px;
+  background-color: var(--mobile-menu-color);
+  position: fixed;
+  top: var(--mobile-navbar-height);
+  width: 100%;
+  align-items: center;
+  padding: 20px 0;
+  height: calc(100% - var(--mobile-navbar-height));
+  overflow-y: auto;
+  left: 100%;
+  transition: left 0.3s;
+}
+
+.nav-menu_visible {
+  left: 0;
+}
+
+.nav-item {
+  line-height: calc(var(--mobile-navbar-height) + 10px);
+  font-size: 18px;
+  margin: 0 18px;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link_active {
+  background: none;
+  color: var(--mobile-menu-hover-color);
+  transition: 0.5s;
+}
+
+.nav-toggle {
+  color: var(--toggle-color);
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: var(--mobile-navbar-height);
+  cursor: pointer;
+  display: block;
+}
+
+/* Desktop */
+
+@media (min-width: 769px) {
+  .header {
+    height: var(--navbar-height);
+  }
+
+  .logo {
+    font-size: 30px;
+    padding: 0 40px;
+    line-height: var(--navbar-height);
+  }
+
+  .nav-menu {
+    flex-direction: row;
+    margin-right: 40px;
+    background: none;
+    position: initial;
+    padding: 0;
+    width: auto;
+  }
+
+  .nav-item {
+    line-height: var(--navbar-height);
+  }
+
+  .nav-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+  }
+
+  .nav-link:hover,
+  .nav-link_active {
+    color: var(--dark);
+    background-color: var(--navbar-hover-color);
+    transition: 0.5s;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}

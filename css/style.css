@@ -1,0 +1,43 @@
+:root {
+  /* --header-background-color: #0769e9; */
+  --header-background-color: var(--color-dark-transparent-50);
+  /* --header-background-color: linear-gradient(rgba(7, 105, 233, 1), transparent); */
+  --navbar-height: 80px;
+  --navbar-color: rgb(255, 255, 255);
+  /* --navbar-hover-color: rgb(3, 69, 116); */
+  --navbar-hover-color: var(--color-light);
+  --mobile-navbar-height: 60px;
+  /* --mobile-menu-color: rgb(44, 62, 80); */
+  --mobile-menu-color: var(--color-dark-transparent-90);
+  /* --mobile-menu-hover-color: rgb(131, 197, 247); */
+  --mobile-menu-hover-color: var(--color-light);
+  --link-color: rgb(255, 255, 255);
+  --toggle-color: rgb(255, 255, 255);
+
+  --color-black: rgb(0, 0, 0);
+  --color-white: rgb(255, 255, 255);
+  --color-light: rgb(188, 161, 119);
+  --color-light-transparent: rgba(188, 161, 119, 0.5);
+  --color-dark: rgb(48, 45, 45);
+  --color-dark-transparent-50: rgba(48, 45, 45, 0.5);
+  --color-dark-transparent-90: rgba(48, 45, 45, 0.9);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
