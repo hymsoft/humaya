@@ -18,7 +18,7 @@ navToggle.addEventListener('click', () => {
  * @param {Event} event - Objeto de evento
  */
 navMenu.addEventListener('click', function (event) {
-    event.preventDefault();
+    // event.preventDefault();
 
     if (event.target.classList.contains('nav-link')) {
         const navLinks = this.querySelectorAll('.nav-link');
