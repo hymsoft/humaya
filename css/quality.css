@@ -62,7 +62,7 @@
   }
 }
 
-/* Tablet */
+/* Desktop */
 @media (min-width: 769px) {
   #quality {
     & .quality-container {
