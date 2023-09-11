@@ -6,7 +6,7 @@
   justify-content: center;
   width: 90%;
   max-width: var(--max-width);
-  height: 430px;
+  height: 470px;
   overflow: hidden;
   margin: 20px auto;
   border-radius: 8px;
@@ -51,18 +51,9 @@
     }
 
     & input:focus,
-    input:valid,
-    textarea:focus,
-    textarea:valid {
+    textarea:focus {
       background-color: var(--color-light);
       outline: none;
-    }
-
-    & input:-webkit-autofill,
-    input:-webkit-autofill:hover,
-    input:-webkit-autofill:focus {
-      background-color: var(--color-light) !important;
-      outline: none !important;
     }
 
     & textarea {
@@ -96,7 +87,7 @@
 /* Tablet */
 @media (min-width: 668px) {
   .contact {
-    height: 400px;
+    height: 440px;
 
     & .left-container {
       display: block;
@@ -107,6 +98,6 @@
 /* Desktop */
 @media (min-width: 769px) {
   .contact {
-    height: 380px;
+    height: 420px;
   }
 }

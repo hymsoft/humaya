@@ -10,12 +10,17 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/menu.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/products.css" />
     <link rel="stylesheet" href="./css/quality.css" />
     <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/recipe.css" />
     <!-- Scripts -->
     <script defer src="./js/menu.js"></script>
   </head>
@@ -63,12 +68,12 @@
       </div>
     </main>
     <section id="products">
+      <h2 class="products-title upper">Productos</h2>
       <!-- Producto 1 -->
-      <div class="section-title-light upper">Productos</div>
       <article class="product-container product-bg-dark">
         <div class="product-img img1"></div>
         <div class="product-info">
-          <h2 class="product-title upper">Dulce de leche tradicional</h2>
+          <h3 class="product-title upper">Dulce de leche tradicional</h3>
           <p class="product-description">
             Elaboración artesanal de principio a fin, con un sabor intenso,
             receta tradicional.
@@ -85,7 +90,7 @@
       <article class="product-container product-bg-dark">
         <div class="product-img img2"></div>
         <div class="product-info">
-          <h2 class="product-title upper">Dulce de leche sin azúcar</h2>
+          <h3 class="product-title upper">Dulce de leche sin azúcar</h3>
           <p class="product-description">
             Elaboración artesanal para cuidar tu silueta sin renunciar a nada,
             endulzado naturalmente con stevia.
@@ -102,7 +107,7 @@
       <article class="product-container product-bg-dark">
         <div class="product-img img3"></div>
         <div class="product-info">
-          <h2 class="product-title upper">Dulce choconutt</h2>
+          <h3 class="product-title upper">Dulce choconutt</h3>
           <p class="product-description">
             Elaboración artesanal para el capricho dulce, combinación de dulce
             de leche, chocolate y pasta de avellanas. Una delicia única.
@@ -119,7 +124,7 @@
       <article class="product-container">
         <div class="product-img featured"></div>
         <div class="product-info">
-          <h2 class="product-title upper">Alfajores de maicena</h2>
+          <h3 class="product-title upper">Alfajores de maicena</h3>
           <p class="product-description">
             Alfajores de dulce de leche con coco rallado, relleno con 2cm de
             pura dulzura. Pudiendo elegir entre dulce de leche tradicional,
@@ -136,7 +141,7 @@
     </section>
     <section id="quality">
       <div class="quality-container">
-        <h2 class="quality-title">La mejor calidad para vos</h2>
+        <h2 class="quality-title upper">La mejor calidad para vos</h2>
         <div class="quality-parts-container">
           <div class="quality-part">
             <div class="quality-icon">
@@ -182,6 +187,182 @@
           <button type="submit">Enviar</button>
         </form>
       </div>
+    </section>
+    <section id="recipe">
+      <h2 class="recipes-title upper">Recetas</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card_image">
+                <img src="/img/conitos.jpg" alt="Conitos de dulce de leche" />
+              </div>
+              <div class="card_content">
+                <h2 class="card_title">Conitos</h2>
+                <div class="card_text">
+                  <p>
+                    Una deliciosa opcion para acompañar las meriendas, ese
+                    antojo de media noche o compartir con amigos.
+                  </p>
+                </div>
+                <div class="card_btn_container">
+                  <button class="product-btn product-btn-dark">
+                    Preparación
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card_image">
+                <img src="/img/pepas.jpg" alt="Pepas de dulce de leche" />
+              </div>
+              <div class="card_content">
+                <h2 class="card_title">Pepas</h2>
+                <div class="card_text">
+                  <p>
+                    Las galletitas más tiernas y ricas, rellenas de dulce de
+                    leche, ideales para el mate y la hora del té.
+                  </p>
+                </div>
+                <div class="card_btn_container">
+                  <button class="product-btn product-btn-dark">
+                    Preparación
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card_image">
+                <img src="./img/choconut.jpeg" alt="Torta de chocolate y nut" />
+              </div>
+              <div class="card_content">
+                <h2 class="card_title">Torta nutt</h2>
+                <div class="card_text">
+                  <p>
+                    La torta de tres capas más sabrosa del mundo, combina una
+                    base de vainilla, dulce de leche y cubierta de choconutt.
+                  </p>
+                </div>
+                <div class="card_btn_container">
+                  <button class="product-btn product-btn-dark">
+                    Preparación
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card_image">
+                <img src="/img/conitos.jpg" alt="Conitos de dulce de leche" />
+              </div>
+              <div class="card_content">
+                <h2 class="card_title">Conitos</h2>
+                <div class="card_text">
+                  <p>
+                    Una deliciosa opcion para acompañar las meriendas, ese
+                    antojo de media noche o compartir con amigos.
+                  </p>
+                </div>
+                <div class="card_btn_container">
+                  <button class="product-btn product-btn-dark">
+                    Preparación
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card_image">
+                <img src="/img/pepas.jpg" alt="Pepas de dulce de leche" />
+              </div>
+              <div class="card_content">
+                <h2 class="card_title">Pepas</h2>
+                <div class="card_text">
+                  <p>
+                    Las galletitas más tiernas y ricas, rellenas de dulce de
+                    leche, ideales para el mate y la hora del té.
+                  </p>
+                </div>
+                <div class="card_btn_container">
+                  <button class="product-btn product-btn-dark">
+                    Preparación
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card_image">
+                <img src="./img/choconut.jpeg" alt="Torta de chocolate y nut" />
+              </div>
+              <div class="card_content">
+                <h2 class="card_title">Torta nutt</h2>
+                <div class="card_text">
+                  <p>
+                    La torta de tres capas más sabrosa del mundo, combina una
+                    base de vainilla, dulce de leche y cubierta de choconutt.
+                  </p>
+                </div>
+                <div class="card_btn_container">
+                  <button class="product-btn product-btn-dark">
+                    Preparación
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          loop: true,
+          autoplay: {
+            delay: 5000,
+          },
+          speed: 1000,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          // Navigation arrows
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          },
+        });
+      </script>
     </section>
   </body>
 </html>

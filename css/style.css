@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Mohave:wght@300;700&family=Open+Sans&display=swap");
+
 :root {
   --max-width: 992px;
   /* --header-background-color: #0769e9; */
@@ -22,6 +24,10 @@
   --color-dark: rgb(48, 45, 45);
   --color-dark-transparent-50: rgba(48, 45, 45, 0.5);
   --color-dark-transparent-90: rgba(48, 45, 45, 0.9);
+
+  --title-font: "Mohave", sans-serif;
+  --title-size: 4.5rem;
+  --body-font: "Open Sans", sans-serif;
 }
 
 * {
@@ -36,7 +42,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: var(--body-font);
 }
 
 a {
