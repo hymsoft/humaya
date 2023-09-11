@@ -76,4 +76,11 @@
   .swiper-pagination {
     display: none;
   }
+
+  #recipe {
+    & .swiper {
+      width: var(--max-width);
+      margin: 0 auto;
+    }
+  }
 }

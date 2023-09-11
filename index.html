@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="./css/quality.css" />
     <link rel="stylesheet" href="./css/contact.css" />
     <link rel="stylesheet" href="./css/recipe.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
     <!-- Scripts -->
     <script defer src="./js/menu.js"></script>
   </head>
@@ -43,10 +44,10 @@
             <a href="#products" class="nav-link link">Productos</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link link">Locales</a>
+            <a href="" class="nav-link link">Locales</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link link">Contactos</a>
+            <a href="#contact" class="nav-link link">Contactos</a>
           </li>
         </ul>
       </nav>
@@ -170,22 +171,25 @@
         </div>
       </div>
     </section>
-    <section class="contact">
-      <div class="left-container"></div>
-      <div class="right-container">
-        <h2>
-          Dejanos tu consulta y nuestro personal se pondrá en contacto a la
-          brevedad:
-        </h2>
-        <form id="contactForm">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" required />
-          <label for="email">Email:</label>
-          <input type="email" id="email" required />
-          <label for="consulta">Consulta:</label>
-          <textarea id="consulta" rows="4"></textarea>
-          <button type="submit">Enviar</button>
-        </form>
+    <section id="contact">
+      <h2 class="contact-title upper">Contactános</h2>
+      <div class="contact-container">
+        <div class="left-container"></div>
+        <div class="right-container">
+          <h2>
+            Dejanos tu consulta y nuestro personal se pondrá en contacto a la
+            brevedad:
+          </h2>
+          <form id="contactForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" required />
+            <label for="consulta">Consulta:</label>
+            <textarea id="consulta" rows="4"></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
       </div>
     </section>
     <section id="recipe">
@@ -255,7 +259,6 @@
               </div>
             </div>
           </div>
-
           <div class="swiper-slide">
             <div class="card">
               <div class="card_image">
@@ -329,40 +332,78 @@
       <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
       <!-- Initialize Swiper -->
-      <script>
-        var swiper = new Swiper(".mySwiper", {
-          slidesPerView: 1,
-          spaceBetween: 10,
-          loop: true,
-          autoplay: {
-            delay: 5000,
-          },
-          speed: 1000,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          // Navigation arrows
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          breakpoints: {
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 40,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-          },
-        });
-      </script>
+      <script src="./js/recipe-swiper.js"></script>
     </section>
+    <footer>
+      <div class="footer-container">
+        <article class="logo">
+          <picture>
+            <img src="./img/LogoHumaya100x100.png" alt="logo Humaya" />
+          </picture>
+        </article>
+        <article class="menu-container">
+          <h3 class="title">Menú</h3>
+          <ul class="menu-items">
+            <li class="menu-item"><a class="menu-links" href="#">Home</a></li>
+            <li class="menu-item">
+              <a class="menu-links" href="#products">Productos</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-links" href="#">Locales</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-links" href="#contact">Contactos</a>
+            </li>
+          </ul>
+        </article>
+        <article class="navigation-container">
+          <h3 class="title">Navegación</h3>
+          <ul class="navigation-items">
+            <li class="navigation-item">
+              <a class="navigation-links" href="#">Preguntas frecuentes</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-links" href="#">Distribuidores</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-links" href="#">Prensa</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-links" href="#">Recetas exclusivas</a>
+            </li>
+          </ul>
+        </article>
+        <article class="social-container">
+          <h3 class="title">Redes</h3>
+          <ul class="social-items">
+            <li class="social-item">
+              <a class="social-link" href="#"
+                ><i class="bi bi-instagram"></i
+              ></a>
+            </li>
+            <li class="social-item">
+              <a class="social-link" href="#"><i class="bi bi-facebook"></i></a>
+            </li>
+            <li class="social-item">
+              <a class="social-link" href="#"><i class="bi bi-tiktok"></i></a>
+            </li>
+          </ul>
+        </article>
+        <article class="map-container">
+          <h3 class="title">Ubicación</h3>
+          <p class="address">Monte de oca 2356, CABA</p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.0392292867527!2d-58.370521100000005!3d-34.6537122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334aab78be889%3A0xe808082ff7311cac!2sAv.%20Montes%20de%20Oca%202356%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1694413956270!5m2!1ses!2sar"
+            width="400"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </article>
+      </div>
+      <p>Realizado con ♥ y mucho ☕ por HyM Soft 2023</p>
+    </footer>
   </body>
 </html>

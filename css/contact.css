@@ -1,103 +1,117 @@
-.contact {
-  font-size: 1.5rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  max-width: var(--max-width);
-  height: 470px;
-  overflow: hidden;
-  margin: 20px auto;
-  border-radius: 8px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12),
-    0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
-
-  & .left-container {
-    width: 40%;
-    background-image: url("./../img/contact-img.png");
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    display: none;
+#contact {
+  & .contact-title {
+    color: var(--color-dark);
+    font-family: var(--title-font);
+    font-size: var(--title-size);
+    text-align: center;
+    margin: 1em 0;
   }
 
-  & .right-container {
+  & .contact-container {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     width: 90%;
-    max-width: 900px;
-    background-color: #fff;
-    padding: 20px;
+    max-width: var(--max-width);
+    height: 470px;
+    overflow: hidden;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12),
+      0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
 
-    & label,
-    input,
-    textarea {
-      display: block;
-      width: 100%;
-      margin-bottom: 10px;
+    & .left-container {
+      width: 40%;
+      background-image: url("./../img/contact-img.png");
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      display: none;
     }
 
-    & label {
-      font-weight: bold;
-    }
+    & .right-container {
+      width: 90%;
+      max-width: 900px;
+      background-color: #fff;
+      padding: 20px;
 
-    & input,
-    textarea {
-      padding: 10px;
-      border: none;
-      background-color: var(--color-dark);
-      color: var(--color-white);
-      border-radius: 4px;
-      transition: background-color 0.3s;
-    }
+      & label,
+      input,
+      textarea {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+      }
 
-    & input:focus,
-    textarea:focus {
-      background-color: var(--color-light);
-      outline: none;
-    }
+      & label {
+        font-weight: bold;
+      }
 
-    & textarea {
-      resize: none;
-    }
+      & input,
+      textarea {
+        padding: 10px;
+        border: none;
+        background-color: var(--color-dark);
+        color: var(--color-white);
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
 
-    & h2 {
-      font-size: 1.9rem;
-      font-weight: 300;
-      margin-bottom: 10px;
-    }
+      & input:focus,
+      textarea:focus {
+        background-color: var(--color-light);
+        outline: none;
+      }
 
-    & button {
-      padding: 10px 20px;
-      border: none;
-      background-color: var(--color-dark);
-      color: var(--color-white);
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      display: block;
-      margin: 30px auto 0;
-    }
+      & textarea {
+        resize: none;
+      }
 
-    & button:hover {
-      background-color: var(--color-black);
+      & h2 {
+        font-size: 1.9rem;
+        font-weight: 300;
+        margin-bottom: 10px;
+      }
+
+      & button {
+        padding: 10px 20px;
+        border: none;
+        background-color: var(--color-dark);
+        color: var(--color-white);
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: block;
+        margin: 30px auto 0;
+      }
+
+      & button:hover {
+        background-color: var(--color-black);
+      }
     }
   }
 }
 
 /* Tablet */
 @media (min-width: 668px) {
-  .contact {
-    height: 440px;
+  #contact {
+    & .contact-container {
+      height: 440px;
 
-    & .left-container {
-      display: block;
+      & .left-container {
+        display: block;
+      }
     }
   }
 }
 
 /* Desktop */
 @media (min-width: 769px) {
-  .contact {
-    height: 420px;
+  #contact {
+    .contact-container {
+      height: 420px;
+    }
   }
 }
