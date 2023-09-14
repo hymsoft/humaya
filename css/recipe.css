@@ -50,12 +50,15 @@
   & .card_content {
     & .card_title {
       font-family: var(--title-font);
-      margin: 20px 0;
+      font-size: 1.2em;
+      margin: 10px 0;
+      padding: 10px;
     }
 
     & .card_text {
       padding: 0 20px;
       text-align: initial;
+      font-size: 1.6rem;
     }
 
     & .card_btn_container {
