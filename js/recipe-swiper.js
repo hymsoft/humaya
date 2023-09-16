@@ -1,28 +1,30 @@
-// Llamada a la api y carga de las card
-const getData = () => {
-  fetch('https://sazonapi.onrender.com/api/v1/recipies')
-    .then(response => {
-      // Verifico  si la respuesta es exitosa (código 200-299)
-      if (!response.ok) {
-        throw new Error('Error al obtener los datos de la API');
-      }
-      // Parseo la respuesta como JSON
-      return response.json();
-    })
-    .then(data => {
-      // Aca puedo llenar las tarjetas, pero mejor lo hago en una funcion separada
-      fillRecipeCards(data);
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-}
+let dataRecipes = []
+/**
+ * Función asíncrona para obtener las recetas de una API.
+ * @returns {Promise} Una promesa que se resolverá con los datos de las recetas, o se rechazará con un error si ocurre.
+ */
+const getRecipes = async () => {
+  const url = "https://sazonapi.hymsoft.repl.co/api/v1/recipies";
+  try {
+    const response = await fetch(url);
+    const { data } = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error al obtener las recetas:", error);
+    throw error;
+  }
+};
 
+/**
+ * Llena las tarjetas de recetas en el carrusel.
+ * @param {Object} recipes - Objeto de recetas obtenidas de la API.
+ */
 const fillRecipeCards = (recipes) => {
   const swiperWrapper = document.querySelector('.swiper-wrapper');
 
   // Aca si lleno los datos de las tarjetas
-  recipes.data.forEach(recipe => {
+  let innerId = 0
+  recipes.forEach(recipe => {
     /* Template for the Team Cards */
     const template = `
         <div class="swiper-slide">
@@ -36,17 +38,47 @@ const fillRecipeCards = (recipes) => {
                 <p>${recipe.descripcion_tipo}</p>
               </div>
               <div class="card_btn_container">
-                <button class="product-btn product-btn-dark">Preparación</button>
+                <button class="product-btn product-btn-dark recipe-btn" data-innerId = "${innerId++}">Preparación</button>
               </div>
             </div>
           </div>
         </div>`;
     swiperWrapper.insertAdjacentHTML('beforeend', template);
   })
-  // Ahora inicializo el carrusel
-  initSwiper();
 }
 
+const captureRecipeButton = () => {
+  // Selecciono todos los botones con la clase "recipe-btn"
+  const recipeButtons = document.querySelectorAll('.recipe-btn');
+
+  // Agrego un evento de clic a cada botón
+  recipeButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+      // obtengo el valor de data-innerid
+      const innerId = event.target.dataset.innerid;
+      console.log(`Valor de data-innerid: ${innerId}`);
+    });
+  });
+
+}
+
+// Llama a la función para obtener recetas y luego llenar las tarjetas.
+getRecipes()
+  .then((recipes) => {
+    dataRecipes = recipes
+    fillRecipeCards(dataRecipes)
+    // Ahora inicializo el carrusel
+    initSwiper();
+    // Capturo los botones de las cards
+    captureRecipeButton()
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+
+
+// Swiper
 const initSwiper = () => {
   const swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
@@ -81,5 +113,3 @@ const initSwiper = () => {
     },
   });
 }
-
-getData();
