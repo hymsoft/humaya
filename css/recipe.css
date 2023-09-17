@@ -78,13 +78,13 @@
     border-bottom: 1px solid #a6e9e3;
 
     & .property {
-      display: inline-block;
+      display: block;
       margin: 0 5px 0 0;
     }
 
     & .property:not(:first-child) {
-      border-left: 1px solid #a6e9e3;
-      padding: 0 0 0 7px;
+      /* border-left: 1px solid #a6e9e3; */
+      /* padding: 0 0 0 7px; */
     }
   }
 
@@ -152,6 +152,20 @@
     & .swiper {
       width: var(--max-width);
       margin: 0 auto;
+    }
+  }
+
+  .recipe-modal-container {
+    & .properties {
+      & .property {
+        display: inline-block;
+        margin: 0 5px 0 0;
+      }
+
+      & .property:not(:first-child) {
+        border-left: 1px solid #a6e9e3;
+        padding: 0 0 0 7px;
+      }
     }
   }
 }
