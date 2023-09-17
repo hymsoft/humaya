@@ -81,11 +81,6 @@
       display: block;
       margin: 0 5px 0 0;
     }
-
-    & .property:not(:first-child) {
-      /* border-left: 1px solid #a6e9e3; */
-      /* padding: 0 0 0 7px; */
-    }
   }
 
   & .title {
@@ -102,11 +97,11 @@
     border-bottom: 1px solid #a6e9e3;
     padding: 0 2em;
     font-size: 1.6em;
-    columns: 2;
-    column-gap: 20px;
+    columns: 1;
+    /* column-gap: 20px; */
 
     & .column {
-      margin-bottom: 1.5em;
+      /* margin-bottom: 1.5em; */
 
       & .ingredient {
         display: block;
@@ -165,6 +160,15 @@
       & .property:not(:first-child) {
         border-left: 1px solid #a6e9e3;
         padding: 0 0 0 7px;
+      }
+    }
+
+    & .ingredients {
+      columns: 2;
+      column-gap: 20px;
+
+      & .column {
+        margin-bottom: 1.5em;
       }
     }
   }

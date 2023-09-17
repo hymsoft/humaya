@@ -47,6 +47,9 @@ const fillRecipeCards = (recipes) => {
   })
 }
 
+/**
+ * Captura el evento de clic en los botones de receta y abre el modal correspondiente.
+ */
 const captureRecipeButton = () => {
   // Selecciono todos los botones con la clase "recipe-btn"
   const recipeButtons = document.querySelectorAll('.recipe-btn');
@@ -61,6 +64,11 @@ const captureRecipeButton = () => {
   });
 }
 
+/**
+ * Abre un modal con los detalles de una receta.
+ *
+ * @param {string} innerId - El identificador interno de la receta.
+ */
 const recipeModal = (innerId) => {
   const { ingredientes, instrucciones, nivel_dificultad: dificultad, tiempo_coccion: coccion, nombre } = dataRecipes[innerId];
   const column1 = Math.ceil(ingredientes.length / 2);
