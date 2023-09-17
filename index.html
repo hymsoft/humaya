@@ -24,6 +24,19 @@
     <link rel="stylesheet" href="./css/footer.css" />
     <!-- Scripts -->
     <script defer src="./js/menu.js"></script>
+    <!-- Modal -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.15.2/tingle.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.15.2/tingle.min.js"></script>
+    <!-- Swiper JS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+    ></script>
+    <!-- Initialize Swiper -->
+    <script defer src="./js/recipe-swiper.js"></script>
   </head>
 
   <body>
@@ -201,11 +214,6 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
-      <!-- Swiper JS -->
-      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-      <!-- Initialize Swiper -->
-      <script src="./js/recipe-swiper.js"></script>
     </section>
     <footer>
       <div class="footer-container">
@@ -278,5 +286,14 @@
       </div>
       <p>Realizado con ♥ y mucho ☕ por HyM Soft 2023</p>
     </footer>
+    <!-- Modal -->
+    <div class="tingle-modal" id="myModal">
+      <div class="tingle-modal-box">
+        <div class="tingle-modal-box__content" id="modalContent">
+          <!-- Aquí se llenarán los detalles de la receta con JavaScript -->
+        </div>
+        <button class="tingle-modal-box__close">Close</button>
+      </div>
+    </div>
   </body>
 </html>

@@ -56,11 +56,75 @@ const captureRecipeButton = () => {
     button.addEventListener('click', (event) => {
       // obtengo el valor de data-innerid
       const innerId = event.target.dataset.innerid;
-      console.log(`Valor de data-innerid: ${innerId}`);
+      recipeModal(innerId)
     });
   });
-
 }
+
+const recipeModal = (innerId) => {
+  const { ingredientes, instrucciones, nivel_dificultad: dificultad, tiempo_coccion: coccion, nombre } = dataRecipes[innerId];
+  const column1 = Math.ceil(ingredientes.length / 2);
+  const modal = new tingle.modal();
+  console.log();
+
+  // Aca armo las dos columnas con los ingredientes
+  let column1HTML = '';
+  let column2HTML = '';
+
+  for (let i = 0; i < ingredientes.length; i++) {
+    if (i < column1) {
+      // Agrego los primeros ingredientes a la primera columna
+      column1HTML += `<label class="ingredient">
+                        <input type="checkbox"> <span>${ingredientes[i].nombre + ' ' + ingredientes[i].cantidad}</span>
+                       </label>
+                      `;
+    } else {
+      // Agrego el resto de ingredientes a la segunda columna
+      column2HTML += `<label class="ingredient">
+                        <input type="checkbox"> <span>${ingredientes[i].nombre + ' ' + ingredientes[i].cantidad}</span>
+                      </label>
+                      `;
+    }
+  }
+
+  // Aca armo la lista desordenada para los pasos
+  const listaDeInstrucciones = instrucciones.split('. ');
+  let paso = 1;
+
+  let listaHTML = '<ul>';
+  for (const instruccion of listaDeInstrucciones) {
+    listaHTML += `<li><span class='paso'>Paso ${paso++}</span> ${instruccion}.</li>`;
+  }
+  listaHTML += '</ul>';
+
+  // Aca armo el contenido del modal
+  modal.setContent(`
+  <div class='recipe-modal-container'>
+    <div class='properties'>
+      <span class='property'><i class="bi bi-clock"></i> ${coccion}</span>
+      <span class='property'><i class="bi bi-bar-chart-fill"></i> ${dificultad}</span>
+    </div>
+    <div class='title'>
+      <h3>Ingredientes para preparar ${nombre}</h3>
+    </div>
+    <div class='ingredients'>
+      <div class="column">
+        ${column1HTML}
+      </div>
+      <div class="column">
+        ${column2HTML}
+      </div>
+    </div>
+    <div class='instructions'>
+      ${listaHTML}
+    </div>
+  </div>
+`);
+
+  console.log(instrucciones);
+
+  modal.open();
+};
 
 // Llama a la función para obtener recetas y luego llenar las tarjetas.
 getRecipes()

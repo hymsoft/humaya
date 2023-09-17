@@ -69,6 +69,74 @@
   }
 }
 
+.recipe-modal-container {
+  border: 1px solid #a6e9e3;
+
+  & .properties {
+    padding: 0.5em 1.3em;
+    font-size: 1.6em;
+    border-bottom: 1px solid #a6e9e3;
+
+    & .property {
+      display: inline-block;
+      margin: 0 5px 0 0;
+    }
+
+    & .property:not(:first-child) {
+      border-left: 1px solid #a6e9e3;
+      padding: 0 0 0 7px;
+    }
+  }
+
+  & .title {
+    font-size: 1.8em;
+    line-height: 1.6;
+    font-weight: 600;
+    padding: 0 0.3em 0 0.1em;
+    margin: 0.5em 1em 0.25em 1em;
+    color: #333;
+    display: block;
+  }
+
+  & .ingredients {
+    border-bottom: 1px solid #a6e9e3;
+    padding: 0 2em;
+    font-size: 1.6em;
+    columns: 2;
+    column-gap: 20px;
+
+    & .column {
+      margin-bottom: 1.5em;
+
+      & .ingredient {
+        display: block;
+      }
+
+      & .ingredient.checked {
+        text-decoration: line-through;
+      }
+
+      & .ingredient input[type="checkbox"]:checked + span {
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  & .instructions {
+    font-size: 1.5em;
+
+    padding: 1em 0.3em 0 0.1em;
+    margin: 0.5em 1em 0.25em 1em;
+
+    & li {
+      margin-bottom: 0.8em;
+      & span {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
 /* Tablet o mas*/
 @media (min-width: 668px) {
   .swiper-button-prev,
